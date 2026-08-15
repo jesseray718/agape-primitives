@@ -1,5 +1,24 @@
 # Agape Primitives
 
+## Latest measured results (Samsung A15)
+
+| Metric | Value | Basis |
+|--------|-------|-------|
+| elapsed | 0.0764 s | measured |
+| bots executed | 7 | measured |
+| A15 energy estimate | 0.0588 J | estimate_a15 |
+| Landauer lower bound | 1.44e-17 J | landauer_lower_bound |
+| coordination cost | 0.0252 | measured |
+| coherence | 1.0 | measured |
+| synergy | 1.88x | measured |
+| trace Merkle | `409bd399dbb6d0d9f308c180312c5693d56109a1...` | measured |
+
+Backend: mock (Ollama not responding at time of run).  
+Full sealed claim: `BENCHMARK_RESULT.json`
+
+---
+
+
 Three standalone, zero-dependency Python packages extracted from the OpenRoot / UNE work.
 
 They implement a simple claim:

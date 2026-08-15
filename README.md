@@ -4,29 +4,19 @@
 
 | Metric | Value | Basis |
 |--------|-------|-------|
-| elapsed | 0.0764 s | measured |
+| elapsed | 0.0625 s | measured |
 | bots executed | 7 | measured |
-| A15 energy estimate | 0.0588 J | estimate_a15 |
-| Landauer lower bound | 1.44e-17 J | landauer_lower_bound |
+| A15 energy estimate | 0.0481 J | estimate_a15 |
+| Landauer lower bound | 1.33e-17 J | landauer_lower_bound |
 | coordination cost | 0.0252 | measured |
 | coherence | 1.0 | measured |
 | synergy | 1.88x | measured |
-| trace Merkle | `409bd399dbb6d0d9f308c180312c5693d56109a1...` | measured |
+| trace Merkle | `fbb4d05a890e7b9b4933b450c51b47a34c66b6bc...` | measured |
 
-Backend: mock (Ollama not responding at time of run).  
+Backend: **mock**  
 Full sealed claim: `BENCHMARK_RESULT.json`
 
 ---
-
-
-Three standalone, zero-dependency Python packages extracted from the OpenRoot / UNE work.
-
-They implement a simple claim:
-
-> Structure beats scale.  
-> A small model + fractal recursion + thermodynamic accounting + coherence filtering  
-> can outperform a large model that has none of those things — and you can prove it.
-
 ## The three packages
 
 | Package | One-line purpose | Install |
@@ -78,3 +68,4 @@ Permaculture ethics applied to computation: observe, catch & store energy, produ
 Code: GPL-3.0  
 Docs: CC-BY-SA 4.0  
 No patents. Ever. Defensive publication.
+

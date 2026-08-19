@@ -1,71 +1,21 @@
-# Agape Primitives
+# agape-primitives
 
-## Latest measured results (Samsung A15)
+**Thermodynamic multi-agent and cooperation primitives for the OpenRoot lattice.**
 
-| Metric | Value | Basis |
-|--------|-------|-------|
-| elapsed | 0.0625 s | measured |
-| bots executed | 7 | measured |
-| A15 energy estimate | 0.0481 J | estimate_a15 |
-| Landauer lower bound | 1.33e-17 J | landauer_lower_bound |
-| coordination cost | 0.0252 | measured |
-| coherence | 1.0 | measured |
-| synergy | 1.88x | measured |
-| trace Merkle | `fbb4d05a890e7b9b4933b450c51b47a34c66b6bc...` | measured |
+## What this is
+Core primitives and experiments around structured cooperation, fractal lattices, and measurable synergy. Designed to work with local and offline models and to keep coordination cost low.
 
-Backend: **mock**  
-Full sealed claim: `BENCHMARK_RESULT.json`
+## Role in the Lattice
+Provides reusable cooperation building blocks used by UNE and the wider Agape layer.
 
----
-## The three packages
+## Bigger Picture
+OpenRoot aims to make pure cooperation the lowest-cost strategy while increasing useful work available to the lowest-capability node. These primitives exist to make that measurable and composable.
 
-| Package | One-line purpose | Install |
-|---------|------------------|---------|
-| **etaledger** | η = useful_joules / human_joules. Measure the real cost of any computation. | `pip install -e ./etaledger` |
-| **fractallattice** | Six complementary nanobots recurse on any LLM. Depth instead of width. | `pip install -e ./fractallattice` |
-| **agaperesonance** | Multiple predictions enter. Noise cancels. The standing wave survives. | `pip install -e ./agaperesonance` |
+## Current Status
+Active. Extracted and refined from the broader OpenRoot/UNE work.
 
-No cloud required. No patents. GPL-3.0.
-
-## Quick local test (Termux / any Linux)
-
-```bash
-cd agape_primitives
-python3 demo_integration.py          # mock LLM, proves the plumbing
-python3 real_llm_runner.py           # tries Ollama first, falls back cleanly
-```
-
-## Real LLM bridge
-
-`real_llm_runner.py` will:
-
-1. Try a local Ollama model (preferred — zero cost, offline).
-2. Fall back to a simple mock if Ollama is not running.
-3. Feed every nanobot output into the resonance filter.
-4. Record η, Landauer cost, Merkle provenance, and the standing wave.
-
-Replace the mock with any `async def call_fn(prompt: str, system: str) -> str` (llama.cpp, OpenAI-compatible, etc.).
-
-## Why this exists
-
-Most AI progress is “more parameters, more GPUs, more energy”.  
-These packages ask the opposite question: how much useful work can you extract per joule of human attention and silicon energy?
-
-etaledger makes the cost visible.  
-fractallattice gives a small model six complementary jobs and lets the lattice deepen.  
-agaperesonance keeps only the patterns that survive mutual reinforcement.
-
-The combination is a research instrument, not a chatbot.
-
-## Origin
-
-Built by Jesse Ray (OpenRoot), Sikeston, Missouri.  
-Concrete by day. Thermodynamic ledgers and fractal lattices by night.  
-Permaculture ethics applied to computation: observe, catch & store energy, produce no waste, use edges, value the marginal.
-
-## License
-
-Code: GPL-3.0  
-Docs: CC-BY-SA 4.0  
-No patents. Ever. Defensive publication.
-
+## Related
+- [openroot](https://github.com/jesseray718/openroot)
+- [une](https://github.com/jesseray718/une)
+- [agape-une](https://github.com/jesseray718/agape-une)
+- [fractallattice](https://github.com/jesseray718/fractallattice)
